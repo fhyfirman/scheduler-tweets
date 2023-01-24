@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  # GET /about
+  # main page
+  root to: "main#index"
   get "about-us", to: "about#index", as: :about
 
-  # GET root URL
-  # get "/", to: "main#index"
-  root to: "main#index"
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # user page
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
 end
