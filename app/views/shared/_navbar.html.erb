@@ -18,7 +18,7 @@
         <% if Current.user %>
         <li class="nav-item">
           <span class="navbar-text">
-            <%= Current.user.email %>
+            <%= link_to Current.user.email, edit_password_path %>
           </span> 
         </li>
 
